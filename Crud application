@@ -1,0 +1,87 @@
+def viewbook():
+    print("vehicleno\t vehicleownername")
+    for i in range(len(vehicleno)):
+        print(vehicleno[i],"\t",vehicleownername[i])   
+
+def updatebook():
+    fvehicleno=input("enter the find vehicleno")
+    for i in range(len(vehicleno)):
+        if(vehicleno[i]==fvehicleno):
+            uvehicleno=input("enter the vehicle no=")
+            uvehicleownername=input("enter the owner name=")
+            vehicleno[i]=uvehicleno
+            vehicleownername[i]=uvehicleownername
+ 
+def deletebook():
+        dvehicleno=input("enter the delete vehicle no=")
+        for i in range(len(vehicleno)):
+            if(vehicleno[i]==dvehicleno):
+             vehicleno.remove(vehicleno[i])
+             break
+
+def reportbook():
+    for i in range(len(vehicleno)):
+        vehicleownername=input("enter the ownername=")
+        print("vehiclenp \t vehicleownername")
+        if(vehicleownername[i]==rvehicleownername):
+            print(vehicleno[i],"\t",vehicleownername[i])
+            break 
+
+def countbook():
+    c=0
+    for i in range(len(vehicleno)):
+        c+=1
+        print("count=",c)
+           
+                            
+
+vehicleno=[]
+vehicleownername=[]
+count=3
+
+
+while(count!=0):
+    uname=input("enter the usernme=")
+    upass=input("enter the password=")
+    if(uname=="dipak" and upass=="1414"):
+        print("login sucesfull")
+        count=1
+        cnt=1
+        while(cnt!=0):
+            print("traffic online fine")
+            print("1.add book")
+            print("2.view book")
+            print("3.update")
+            print("4.delete")
+            print("5.report")
+            print("6.countbook")
+            print("7.exit")
+            ch=int(input("enter the choice="))   
+            if(ch==1):
+                print("add book")
+                addbook()
+            if(ch==2):
+                print("view book")
+                viewbook()
+            if(ch==3):
+                print("update")
+                updatebook()
+            if(ch==4):
+                print("delete")
+                deletebook()
+            if(ch==5):
+                print("report")
+                reportbook() 
+            if(ch==6):
+                print("countbook")
+                countbook()
+            if(ch==7):
+                print("exit")
+                cnt=0
+    elif(uname!="dipak" and upass!="1414"):
+        print("user and pass incorrect")
+    elif(uname!="dipak"):
+        print("user name is incorrect")
+    elif(upass!="1414"):
+        print("user pass is incorrect")
+        
