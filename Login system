@@ -1,0 +1,6 @@
+    elif(uname!="dipak" and upass!="1414"):
+        print("user and pass incorrect")
+    elif(uname!="dipak"):
+        print("user name is incorrect")
+    elif(upass!="1414"):
+        print("user pass is incorrect")
